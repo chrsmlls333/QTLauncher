@@ -26,15 +26,15 @@
 	<key>CFBundleIconFile</key>
 	<string>droplet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.QTLauncher2</string>
+	<string>com.apple.ScriptEditor.id.QTLauncher</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>QTLauncher2</string>
+	<string>QTLauncher</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.6</string>
+	<string>3.0</string>
 	<key>CFBundleSignature</key>
 	<string>dplt</string>
 	<key>LSMinimumSystemVersionByArchitecture</key>
@@ -49,7 +49,7 @@
 		<key>bundleDividerCollapsed</key>
 		<false/>
 		<key>bundlePositionOfDivider</key>
-		<real>890</real>
+		<real>851</real>
 		<key>dividerCollapsed</key>
 		<false/>
 		<key>eventLogLevel</key>
@@ -57,9 +57,9 @@
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>582</real>
+		<real>727</real>
 		<key>savedFrame</key>
-		<string>-1168 112 1139 875 -1920 0 1920 1058 </string>
+		<string>141 38 1410 1020 0 0 1920 1058 </string>
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>
