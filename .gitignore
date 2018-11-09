@@ -1,2 +1,5 @@
-
+# OS X noise
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
