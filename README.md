@@ -55,6 +55,7 @@ On every run, QTLauncher will check for the first video file in that folder (alp
 - 2.5: add delay until a list of startup times, some reorganization/cleanup
 - 2.6: QTX wasn't receiving loop command, add fit to screen command
 - 3.0: new time-checking system, adds idle handler (so we no longer require Force Quit), adds wait screen, adds notifications
+- 3.1: add fileLoadDelay for older machines opening large videos
 
 ### Development Notes:
 
