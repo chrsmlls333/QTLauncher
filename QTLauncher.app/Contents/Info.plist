@@ -26,7 +26,7 @@
 	<key>CFBundleIconFile</key>
 	<string>droplet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.QTLauncher</string>
+	<string>ca.bc.vanartgallery.qtlauncher</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -34,7 +34,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1</string>
+	<string>3.2</string>
 	<key>CFBundleSignature</key>
 	<string>dplt</string>
 	<key>LSMinimumSystemVersionByArchitecture</key>
@@ -44,12 +44,14 @@
 	</dict>
 	<key>LSRequiresCarbon</key>
 	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2019 Vancouver Art Gallery Association</string>
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
 		<false/>
 		<key>bundlePositionOfDivider</key>
-		<real>877</real>
+		<real>670</real>
 		<key>dividerCollapsed</key>
 		<false/>
 		<key>eventLogLevel</key>
@@ -57,9 +59,9 @@
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>727</real>
+		<real>922</real>
 		<key>savedFrame</key>
-		<string>141 38 1410 1020 0 0 1920 1058 </string>
+		<string>26 201 1203 1215 0 0 2560 1417 </string>
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>

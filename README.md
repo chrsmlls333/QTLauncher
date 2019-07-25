@@ -5,8 +5,8 @@ An overly-complex AppleScript utility to autoplay videos in QuickTime X and Quic
 |                |                        |
 |----------------|------------------------|
 | Author:        | Chris Eugene Mills     |
-| Date:          | Nov 1, 2018            |
-| Version:       | 3.0                    |
+| Date:          | July 25, 2019          |
+| Version:       | 3.2                    |
 | Tested:        | `10.6.8` -> `10.13`    |
 
 ## Features
@@ -32,6 +32,7 @@ On every run, QTLauncher will check for the first video file in that folder (alp
 - set this user to login automatically in `System Preferences > Security & Privacy > General`
 - set a schedule in `System Preferences > Energy Saver`
 - while you're in there, set the display and computer to never sleep
+- note: on older machines opening but not autoplaying, the setting fileLoadDelay may be useful
 
 
 ##### To adjust properties/settings:
@@ -40,8 +41,17 @@ On every run, QTLauncher will check for the first video file in that folder (alp
 - edit the property variables only,
 - save to confirm changes
   - do not re-export
-  - make sure this app isn't running while you save, or it will not compile correctly. If you do save while running, close the app, just add a small change like a space, then re-save
+  - make sure this app isn't running while you save, or it will not compile correctly.
+    - if you do save while running, close the app, just add a small change like a space, then re-save
 - please test by running the app, NOT the play script button in Script Editor
+
+
+##### To export/sign this app:
+
+- make sure your developer macOS certificate is registered in Xcode or KeyChain before coming back to Script Editor,
+- use the Developer ID Application certificate in Export under Code Sign.
+- IMPORTANT: make sure "run only" and "show startup screen" are deselected, and "stay open after run handler" is selected!
+- redo this whenever the code is altered, rather than simply saving in Script Editor.
 
 
 ## Version History:
@@ -56,9 +66,20 @@ On every run, QTLauncher will check for the first video file in that folder (alp
 - 2.6: QTX wasn't receiving loop command, add fit to screen command
 - 3.0: new time-checking system, adds idle handler (so we no longer require Force Quit), adds wait screen, adds notifications
 - 3.1: add fileLoadDelay for older machines opening large videos
+- 3.2: add macOS Developer ID Certificate instructions and future notes (end-of-life)
+
 
 ### Development Notes:
 
 - Export as Application with only `Stay open after run handler` enabled, if such action is necessary.
 - Idle loops do not run in Script Editor: please save script and run from the app icon to debug real-world behavior.
 - A "quit check" has been added to make sure "quit" doesn't exit Script Editor if run from the play button.
+
+
+### Note on High Sierra, Mojave, and later versions of macOS:
+
+- these macOS versions have implemented a series of restrictions like GateKeeper, sandboxing, and 32-bit deprecation (R.I.P. QT7 😟)
+- further "unidentified developer" warnings limit the ease of use, though this can easily be bypassed by shift+launch or ctrl-menu+open
+- this leaves QTLauncher asking for permission for basic tasks like controlling QuickTime and using its Finder functions to access files
+- signing instructions have been added to bypass some of these issues, but it seems to only get worse after Mojave. Apple is killing applescript slowly.
+- an alternate solution is a baked-in application with QTKit support and registration/schedulers to handle autoplaying and playlists, along with custom behaviour. Future pipedream.
